@@ -1,0 +1,157 @@
+/* Custom CSS */
+
+/* Set background and text colors */
+body {
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+
+/* Style header */
+header .navbar-brand {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+#about {
+    background-image: url('https://www.primetechdigital.com/wp-content/uploads/2023/09/primetech.jpg');
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#services {
+    background-image: url('https://img.freepik.com/free-vector/gradient-connection-background_52683-116652.jpg?w=740&t=st=1711895429~exp=1711896029~hmac=1b210fefc2d488fc4ce1e94d0c942582e30b663b5310ba77c66e556c13fac78c');
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.services-background::after {
+    content: '';
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    animation: moveBackground 20s linear infinite;
+}
+
+#join-us {
+    background-size: cover;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    padding: 100px 0; /* Adjust padding for better spacing */
+}
+
+/* Style sections */
+section {
+    padding: 60px 0;
+}
+
+/* Style service cards */
+.card {
+    border: none;
+    transition: all 0.3s;
+    background-image: url('https://pngtree.com/freebackground/artificial-intelligence-robot-man-image_15418973.html'); /* Replace 'path/to/your/image.jpg' with the path to your image */
+    background-size: cover;
+    background-position: center;
+    color: #333; /* Set text color to white or a color that contrasts well with the background image */
+    padding: 20px; /* Adjust padding to give the text some space from the edges of the card */
+    position: relative; /* Position relative to allow absolute positioning of overlay */
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.card h2 {
+    font-size: 1.5rem; /* Adjust heading font size as needed */
+    margin-bottom: 10px; /* Add some space below the heading */
+}
+
+.card p {
+    font-size: 1rem; /* Adjust paragraph font size as needed */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Style team member cards */
+.team-member .card {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.team-member img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+/* Style contact form */
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    border-radius: 15px;
+    border: 1px solid #ced4da;
+    padding: 12px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+form textarea {
+    height: 150px;
+}
+
+form button {
+    border-radius: 15px;
+    padding: 12px 30px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    header .navbar-brand {
+        font-size: 20px;
+    }
+
+    section {
+        padding: 40px 0;
+    }
+
+    .team-member img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@keyframes moveBackground {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
