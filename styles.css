@@ -91,18 +91,6 @@ section {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Style team member cards */
-.team-member .card {
-    border-radius: 15px;
-    overflow: hidden;
-}
-
-.team-member img {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-}
-
 /* Style contact form */
 form input[type="text"],
 form input[type="email"],
@@ -132,26 +120,39 @@ form button:hover {
 }
 
 /* Responsive styles */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
+    /* Adjust styles for medium screens */
     header .navbar-brand {
         font-size: 20px;
     }
-
     section {
         padding: 40px 0;
     }
-
-    .team-member img {
-        width: 120px;
-        height: 120px;
+    .card {
+        margin-bottom: 20px;
     }
 }
 
-@keyframes moveBackground {
-    0% {
-        transform: translateX(0);
+@media (max-width: 768px) {
+    /* Adjust styles for small screens */
+    .navbar-collapse {
+        background-color: #343a40; /* Set background color for collapsed navbar */
     }
-    100% {
-        transform: translateX(-50%);
+    .navbar-nav {
+        margin: auto;
+    }
+    .navbar-nav .nav-link {
+        color: #fff; /* Set text color for navbar links */
+        padding: 10px; /* Add padding to navbar links */
+    }
+    .card {
+        width: 100%; /* Make service cards full width on small screens */
+    }
+}
+
+@media (max-width: 576px) {
+    /* Adjust styles for extra small screens */
+    .navbar-brand {
+        font-size: 18px;
     }
 }
